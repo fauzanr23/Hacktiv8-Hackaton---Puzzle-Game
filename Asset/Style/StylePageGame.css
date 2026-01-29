@@ -92,6 +92,10 @@ body::before {
   transition: 0.3s ease-in;
 }
 
+#nameInput {
+  font-weight: bold;
+}
+
 /* GRID FIX 4 x 5 */
 .game-board {
   display: grid;
@@ -149,23 +153,32 @@ body::before {
 }
 
 .controls {
-  margin-top: 15px;
+  margin-top: 40px;
 }
 
 .btn {
-  padding: 10px 25px;
-  font-size: 16px;
-  border-radius: 20px;
+  padding: 15px 30px;
+  border-radius: 5px;
   border: none;
-  cursor: pointer;
-  background: #ff4d6d;
   color: white;
+  font-weight: bold;
+  background: #ffb703;
+  cursor: pointer;
+  transition: 0.15s;
+  box-shadow: 0 6px #c94c00bd;
+  transition: 0.3s ease-in;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px #c94c00bd;
+  transition: 0.3s ease-out;
 }
 
 .features {
-  margin-top: 15px;
+  margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
   font-weight: bold;
 }
@@ -188,4 +201,23 @@ body::before {
   padding: 30px;
   border-radius: 25px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-content p {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 767.98px) {
+  .home-header {
+    top: unset;
+    bottom: 10px;
+    flex-direction: column;
+  }
 }
